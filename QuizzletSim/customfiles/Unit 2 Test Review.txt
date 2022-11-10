@@ -1,0 +1,10 @@
+Term	Shortened Answer	Full Note
+Term 1	Term 1 is a very cool thing in Alberta. I like it.	• Hello
+		        • This is a sub note
+		• Its really cool because
+		        • Anyways 
+Term 2 	Now this thing is in Nova Scotia. Even cooler	• I gave up
+		        • Big note
+		                ○ Sub sub note
+		        • Just to see if it can fit
+		• Lmao
