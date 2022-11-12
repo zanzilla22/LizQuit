@@ -7,16 +7,15 @@ using System.Linq;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    public Transform textWindow;
-    public GameObject recallTextObject;
+    public CardDisplayer cardDisplayer;
     string filePath = "Unit 2 Test Review";
-    void Start()
+    void Awake()
     {
         //string readFromFilelPath = Application.streamingAssestsPath
-        List<string> terms = new List<string>(File.ReadAllLines("customfiles/" + filePath + " Terms.txt"));
-        List<string> Short = new List<string>(File.ReadAllLines("customfiles/" + filePath + " Short.txt"));
+        List<string> terms = new List<string>(File.ReadAllLines("Assets/customfiles/" + filePath + "/" + filePath + " Terms.txt"));
+        List<string> Short = new List<string>(File.ReadAllLines("Assets/customfiles/" + filePath + "/" + filePath + " Short.txt"));
         List<string> notes = new List<string>();
-        List<string> notesTemp = new List<string>(File.ReadAllLines("customfiles/" + filePath + " Notes.txt"));
+        List<string> notesTemp = new List<string>(File.ReadAllLines("Assets/customfiles/" + filePath + "/" + filePath + " Notes.txt"));
 
         string notesRun = "";
         for (int i = 0; i < notesTemp.Count; i++)
@@ -53,6 +52,9 @@ public class NewBehaviourScript : MonoBehaviour
         Debug.Log(terms.Count);
         Debug.Log(Short.Count);
         Debug.Log(notes.Count);
+
+        cardDisplayer.playTerms = terms;
+        cardDisplayer.playShort = Short;
     }
 
     // Update is called once per frame
