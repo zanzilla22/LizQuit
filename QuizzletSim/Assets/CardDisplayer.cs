@@ -10,6 +10,7 @@ public class CardDisplayer : MonoBehaviour
 
     public GameObject TermText;
     public GameObject ShortText;
+    public GameObject questionsLeft;
 
     void Start()
     {
@@ -33,6 +34,7 @@ public class CardDisplayer : MonoBehaviour
 
     void Update()
     {
+        questionsLeft.GetComponent<TMP_Text>().text = "Questions Left: " + playTerms.Count;
         if (Input.GetKeyDown("space"))
             FlipCard();
         if (Input.GetKeyDown(KeyCode.Return))
